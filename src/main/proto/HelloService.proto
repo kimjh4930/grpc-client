@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package Test;
+
+option java_multiple_files = true;
+option java_package = "example";
+option java_outer_classname = "HelloWorldProto";
+
+service HelloService {
+    rpc sayHello (HelloRequest) returns (HelloReply){
+
+    }
+}
+
+message HelloRequest{
+    string firstName = 1;
+    string lastName = 2;
+}
+
+message HelloReply {
+    string greeting = 1;
+}
